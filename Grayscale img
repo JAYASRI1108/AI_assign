@@ -1,0 +1,25 @@
+import cv2
+
+# Code 1
+img1 = cv2.imread("sample1.png")
+cv2.imshow("sample1", img1)
+cv2.imwrite("sample1Copy.png", img1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+# Code 2
+img2 = cv2.imread("sample2.jpg")
+grayImg2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+cv2.imshow("Orig", img2)
+cv2.imshow("Gray", grayImg2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+# Code 3
+img3 = cv2.imread("sample2.jpg")
+grayImg3 = cv2.cvtColor(img3, cv2.COLOR_BGR2GRAY)
+cv2.imwrite("GrayImage.jpg", grayImg3)
+cv2.imshow("Original", img3)
+cv2.imshow("GrayImage", grayImg3)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
